@@ -101,10 +101,60 @@ db.close()
 ```
 
 
-## Alias para correr con un comando 
-1. Agregar este comando en caso de estar en mac al archivo .zshrc
-```bash
-alias record="cd (ruta de tu archivo) && source env/bin/activate && python3 main.py"
-```
+
+## Crear Alias para Ejecutar Comandos Rápidamente
+
+### macOS (utilizando `.zshrc`)
+
+1. **Abrir el archivo `.zshrc`:**
+   - Abre una terminal.
+   - Usa el comando `nano ~/.zshrc` para abrir el archivo `.zshrc` en el editor de texto `nano`.
+
+2. **Agregar el alias:**
+   - Ve al final del archivo `.zshrc`.
+   - Agrega la línea siguiente:
+     ```bash
+     alias record="cd /ruta/a/tu/archivo && source env/bin/activate && python3 main.py"
+     ```
+     Reemplaza `/ruta/a/tu/archivo` con la ruta donde se encuentra tu archivo y `main.py` con el nombre de tu script principal si es diferente.
+
+3. **Guardar y salir en `nano`:**
+   - Presiona `Ctrl + O` para guardar el archivo.
+   - Presiona `Enter` para confirmar el nombre del archivo.
+   - Presiona `Ctrl + X` para salir de `nano`.
+
+4. **Recargar `.zshrc`:**
+   - Para que los cambios surtan efecto, recarga el archivo `.zshrc` ejecutando `source ~/.zshrc` en la terminal.
+
+5. **Usar el alias:**
+   - Después de recargar, puedes usar el comando `record` en la terminal para ejecutar tu script.
+
+### Windows (utilizando PowerShell o CMD)
+
+1. **Abrir el perfil de PowerShell o CMD:**
+   - Abre PowerShell o CMD como administrador.
+
+2. **Editar el perfil de PowerShell o CMD:**
+   - En PowerShell, puedes editar el perfil ejecutando `notepad $PROFILE`.
+   - En CMD, puedes editar el perfil ejecutando `notepad $PROFILE`.
+
+3. **Agregar el alias:**
+   - Agrega la línea siguiente al final del archivo:
+     ```bash
+     function record { Set-Location "C:\ruta\a\tu\archivo"; .\env\Scripts\Activate.ps1; python main.py }
+     ```
+     Reemplaza `C:\ruta\a\tu\archivo` con la ruta donde se encuentra tu archivo y `main.py` con el nombre de tu script principal si es diferente.
+
+4. **Guardar y cerrar el editor:**
+   - Guarda los cambios y cierra el editor.
+
+5. **Recargar el perfil:**
+   - En PowerShell, ejecuta `. $PROFILE`.
+   - En CMD, cierra y vuelve a abrir la terminal para que los cambios surtan efecto.
+
+6. **Usar el alias:**
+   - Después de recargar, puedes usar el comando `record` en PowerShell o CMD para ejecutar tu script.
+
+
 
 
