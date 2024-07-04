@@ -100,3 +100,11 @@ cursor.close()
 db.close()
 ```
 
+
+## Alias para correr con un comando 
+1. Agregar este comando en caso de estar en mac al archivo .zshrc
+```bash
+alias record="cd (ruta de tu archivo) && source env/bin/activate && python3 main.py"
+```
+
+
