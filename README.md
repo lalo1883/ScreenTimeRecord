@@ -1,6 +1,3 @@
-Aquí tienes todo el texto en formato markdown:
-
-
 # ScreenTimeRecord
 
 ## Pasos para Configurar la Base de Datos
